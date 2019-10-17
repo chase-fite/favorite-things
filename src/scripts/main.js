@@ -27,4 +27,8 @@ const place = document.querySelector("#location")
 
 btn.addEventListener("click", () => {
     out.innerHTML = `I can purchase ${fav.value} at ${place.value}`
+    fav.value = ""
+    place.value = ""
+    fav.focus()
 })
+
