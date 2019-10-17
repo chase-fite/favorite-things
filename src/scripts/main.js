@@ -26,9 +26,13 @@ const place = document.querySelector("#location")
 
 
 btn.addEventListener("click", () => {
+    if (fav.value === "" || place.value === "") {
+        alert("Please enter all information")
+    } else {
     out.innerHTML = `I can purchase ${fav.value} at ${place.value}`
     fav.value = ""
     place.value = ""
     fav.focus()
+    }
 })
 
